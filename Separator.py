@@ -70,6 +70,6 @@ def separate(filename, y=1, a_h=1, a_p=1, k_max=20):
     lb.output.write_wav("H.wav", x_h, sr, norm=False)
     lb.output.write_wav("P.wav", x_p, sr, norm=False)
 
-police = 'police03short.wav' # k = 20, y = 1
-project = 'project_test1.wav'
-separate(project)
+# police = 'police03short.wav'
+# project = 'project_test1.wav'
+# separate(project)
