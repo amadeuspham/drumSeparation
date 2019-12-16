@@ -63,11 +63,15 @@ Due to the nature of the algorithm, which classifies continuity along y-axis in 
 
 ### Results
 Below is the power spectrum of test_samples/police03short.wav
-<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20spec.png?raw=true" width="500" />
+<p align="middle">
+	<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20spec.png?raw=true" width="800" />
+</p>
 
 And the two graphs below are the power spectra of harmonic-only and percussion-only audio outputs, respectively.
-<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20H%20spec.png?raw=true" width="500" />
-<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20P%20spec.png?raw=true" width="500" />
+<p align="middle">
+	<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20H%20spec.png?raw=true" width="800" />
+	<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20P%20spec.png?raw=true" width="800" />
+</p>
 
 Comparing these spectrograms to each other, we can clearly see the harmonics (horizontal lines) in the upper spectrogram as well as the percussions (straight, vertical lines) in the lower one. This indicates a very positive performance of the algorithm on this audio sample.
 
