@@ -3,7 +3,7 @@ An Python implementation of drum separation from music signals. The implementati
 
 This project is the coursework assignment of the course SGN-14007 2019-2020 Introduction to Audio Processing, Tampere University. The audio test samples are provided by the course.
 
-If you are interested, take a look at [our formal report of the project]().
+If you are interested, take a look at [our formal report of the project](https://github.com/amadeuspham/drumSeparation/blob/master/REPORT.pdf).
 
 ## Table of Contents
 - [Repository structure](#repository-structured)
@@ -28,7 +28,8 @@ If you are interested, take a look at [our formal report of the project]().
 │   └── project_test1.wav   --> contains singing, pitch-varying instruments and
 │				some drums               
 ├── LICENSE                
-├── README.md               
+├── README.md
+├── REPORT.pdf              --> formal report of the project               
 ├── Separator.py            --> script to separate a music .wav file to percussion-
 │				only (drums) and harmonic-only (singing & others)          
 ├── testPerformance.py      --> script to test the separation quality with different
