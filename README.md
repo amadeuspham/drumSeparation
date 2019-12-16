@@ -41,7 +41,7 @@ cd drumSeparation
 ```
 
 ### Install dependencies
-Make sure you have the following [Python](https://www.python.org) packages installed: [NumPy](https://numpy.org), [Matplotlib](https://matplotlib.org), [LibROSA](https://librosa.github.io/librosa/). You install all of them through pip by running the following command using on command line:
+Make sure you have the following [Python](https://www.python.org) packages installed: [NumPy](https://numpy.org), [Matplotlib](https://matplotlib.org), [LibROSA](https://librosa.github.io/librosa/). You can install all of them through pip by running the following command using on command line:
 ```bash
 pip install numpy matplotlib librosa
 ```
