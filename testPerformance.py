@@ -3,8 +3,7 @@ from librosa.display import specshow
 import numpy as np
 from Separator import separate
 import matplotlib.pyplot as plt 
-
-filename = "test_samples/project_test1.wav"
+import sys
 
 def test_different_gammas(filename, y_array = np.linspace(0, 1, 5)):
 	"""
@@ -27,8 +26,8 @@ def test_different_gammas(filename, y_array = np.linspace(0, 1, 5)):
 
 	for y in y_array:
 		separate(filename, y);
-		audioH, srH = lb.load('H.wav', sr=None)
-		audioP, srP = lb.load('P.wav', sr=None)
+		audioH, srH = lb.load('output/H.wav', sr=None)
+		audioP, srP = lb.load('output/P.wav', sr=None)
 
 		DH = lb.amplitude_to_db(np.abs(lb.stft(audioH)), ref=np.max)
 		DP = lb.amplitude_to_db(np.abs(lb.stft(audioP)), ref=np.max)
@@ -88,8 +87,8 @@ def test_diffent_iterations_num(filename, k_array = [5, 10, 20, 60, 100]):
 
 	for k in k_array:
 		separate(filename, k_max = k);
-		audioH, srH = lb.load('H.wav', sr=None)
-		audioP, srP = lb.load('P.wav', sr=None)
+		audioH, srH = lb.load('output/H.wav', sr=None)
+		audioP, srP = lb.load('output/P.wav', sr=None)
 
 		DH = lb.amplitude_to_db(np.abs(lb.stft(audioH)), ref=np.max)
 		DP = lb.amplitude_to_db(np.abs(lb.stft(audioP)), ref=np.max)
@@ -128,5 +127,10 @@ def test_diffent_iterations_num(filename, k_array = [5, 10, 20, 60, 100]):
 			+ filename + ' with different no.iterations')
 	plt.show()
 
-test_different_gammas(filename)
-test_diffent_iterations_num(filename)
+if len(sys.argv) == 1:
+    print("Please enter the audio filepath after the .py file")
+    exit(0)
+else:
+    filename = sys.argv[1]
+	test_different_gammas(filename)
+	test_diffent_iterations_num(filename)
