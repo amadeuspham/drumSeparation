@@ -3,6 +3,8 @@ An Python implementation of drum separation from music signals. The implementati
 
 This project is the coursework assignment of the course SGN-14007 2019-2020 Introduction to Audio Processing, Tampere University. The audio test samples are provided by the course.
 
+If you are interested, take a look at [our formal report of the project]().
+
 ## Table of Contents
 - [Repository structure](#repository-structured)
 - [Getting started](#getting-started)
@@ -61,7 +63,7 @@ The separated results will be written to folder /output, in two files: H.wav and
 In addition, spectrograms of the original audio file and the separated files are also drawn. Make sure that both H.wav and P.wav are still inside the ./output folder for this to be done.
 
 ### Recommended use
-Due to the nature of the algorithm, which classifies continuity along y-axis in the spectrogram (frequency) as percussions, and continuity along x-axis in the spectrogram (time) as harmonics, it is recommended to only apply this algorithm on music files with little singing or pitch-varying instruments. THe algorithm works well for drums and pitched instruments tracks.
+Due to the nature of the algorithm, which classifies continuity along y-axis in the spectrogram (frequency) as percussions, and continuity along x-axis in the spectrogram (time) as harmonics, it is recommended to only apply this algorithm on music files with little singing or pitch-varying instruments. The algorithm works well for drums and pitched instruments tracks.
 
 ### Results
 Below is the power spectrum of test_samples/police03short.wav
