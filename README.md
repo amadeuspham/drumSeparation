@@ -20,13 +20,13 @@ An Python implementation of drum separation from music signals. The implementati
 │   ├── police03short.wav   --> mainly contains drums and pitched instruments
 │   │                           with little singing at the end
 │   └── project_test1.wav   --> contains singing, pitch-varying instruments and
-│								some drums               
+│				some drums               
 ├── LICENSE                
 ├── README.md               
 ├── Separator.py            --> script to separate a music .wav file to percussion-
-│								only (drums) and harmonic-only (singing & others)          
+│				only (drums) and harmonic-only (singing & others)          
 ├── testPerformance.py      --> script to test the separation quality with different
-│								parameters
+│				parameters
 
 ```
 
