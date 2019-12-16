@@ -1,6 +1,7 @@
 import numpy as np
 import librosa as lb
-#from scipy.signal import stft, istft
+import matplotlib.pyplot as plt 
+from librosa.display import specshow
 import math
 
 def find_delta(a, H, P):
@@ -70,6 +71,33 @@ def separate(filename, y=1, a_h=1, a_p=1, k_max=20):
     lb.output.write_wav("H.wav", x_h, sr, norm=False)
     lb.output.write_wav("P.wav", x_p, sr, norm=False)
 
-# police = 'police03short.wav'
-# project = 'project_test1.wav'
-# separate(project)
+filename = 'police03short.wav'
+
+# Read music .wav file and plot its power spectrogram
+audioOG, srOG = lb.load(filename, sr=None)
+D = lb.amplitude_to_db(np.abs(lb.stft(audioOG)), ref=np.max)
+plt.figure()
+specshow(D, y_axis='linear')
+plt.colorbar(format='%+2.0f dB')
+plt.title('Power spectrogram of ' + filename)
+plt.show()
+
+# Separate into harmonics & percussion
+separate(filename)
+audioH, srH = lb.load('H.wav', sr=None)
+audioP, srP = lb.load('P.wav', sr=None)
+
+# Get the separated (harmonics-only & percussions-only) power spectrograms
+DH = lb.amplitude_to_db(np.abs(lb.stft(audioH)), ref=np.max)
+DP = lb.amplitude_to_db(np.abs(lb.stft(audioP)), ref=np.max)
+
+# Plot the 2 separated spectrograms
+plt.figure()
+specshow(DH, y_axis='linear')
+plt.colorbar(format='%+2.0f dB')
+plt.title('Power spectrogram of harmonics from ' + filename)
+plt.show()
+specshow(DP, y_axis='linear')
+plt.colorbar(format='%+2.0f dB')
+plt.title('Power spectrogram of percussions from ' + filename)
+plt.show()
