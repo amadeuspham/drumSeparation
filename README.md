@@ -1,6 +1,8 @@
 # Drum Separation
 An Python implementation of drum separation from music signals. The implementation is based on [Nobutaka Dno, Kenichi Miyamoto, Jonathan Le Roux, Hirokazu Kameoka, and Shigeki Sagayama “Separation of a monaural audio signal into harmonic/percussive components by complementary diffusion on spectrogram”](http://www.cs.tut.fi/~sgn14006/PDF/Ono2008EUSIPCO08.pdf).
 
+This project is the coursework assignment of the course SGN-14007 2019-2020 Introduction to Audio Processing, Tampere University. The audio test samples are provided by the course.
+
 ## Table of Contents
 - [Repository structure](#repository-structured)
 - [Getting started](#getting-started)
