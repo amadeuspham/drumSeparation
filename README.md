@@ -16,6 +16,8 @@ An Python implementation of drum separation from music signals. The implementati
 ```
 .
 ├── output                  --> contains the drum-separated results
+├── plots                   --> contains some plots (power spectra and 
+				signal-to-noise ratio plots)
 ├── test_samples            --> contains music audio samples for testing
 │   ├── police03short.wav   --> mainly contains drums and pitched instruments
 │   │                           with little singing at the end
@@ -60,7 +62,14 @@ In addition, spectrograms of the original audio file and the separated files are
 Due to the nature of the algorithm, which classifies continuity along y-axis in the spectrogram (frequency) as percussions, and continuity along x-axis in the spectrogram (time) as harmonics, it is recommended to only apply this algorithm on music files with little singing or pitch-varying instruments. THe algorithm works well for drums and pitched instruments tracks.
 
 ### Results
+Below is the power spectrum of test_samples/police03short.wav
+<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20spec.png?raw=true" width="500" />
 
+And the two graphs below are the power spectra of harmonic-only and percussion-only audio outputs, respectively.
+<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20H%20spec.png?raw=true" width="500" />
+<img src="https://github.com/amadeuspham/drumSeparation/blob/master/plots/police%20P%20spec.png?raw=true" width="500" />
+
+Comparing these spectrograms to each other, we can clearly see the harmonics (horizontal lines) in the upper spectrogram as well as the percussions (straight, vertical lines) in the lower one. This indicates a very positive performance of the algorithm on this audio sample.
 
 ## Testing
 You can test the performance of the algorithm with different range compression values (y) or different number of parameters. The default test values are 0, 0.25, 0.5, 0.75 and 1 for y and 5, 10, 20, 60, 100 for the number of iterations.
