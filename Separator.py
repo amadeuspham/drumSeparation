@@ -71,7 +71,7 @@ def separate(filename, y=1, a_h=1, a_p=1, k_max=20):
     lb.output.write_wav("H.wav", x_h, sr, norm=False)
     lb.output.write_wav("P.wav", x_p, sr, norm=False)
 
-filename = 'police03short.wav'
+filename = 'test_samples/police03short.wav'
 
 # Read music .wav file and plot its power spectrogram
 audioOG, srOG = lb.load(filename, sr=None)

@@ -4,7 +4,7 @@ import numpy as np
 from Separator import separate
 import matplotlib.pyplot as plt 
 
-filename = "project_test1.wav"
+filename = "test_samples/project_test1.wav"
 
 def test_different_gammas(filename, y_array = np.linspace(0, 1, 5)):
 	"""
